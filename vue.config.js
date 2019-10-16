@@ -19,7 +19,10 @@ module.exports = {
    // 多页面入口配置
   pages,
   
-  publicPath: process.env.VUE_APP_PUBLIC_PATH,
+  assetsDir: 'static',
+
+  // cdn域名配置
+  publicPath: '/',
   // 输出文件目录
   outputDir: 'server/public',
 
@@ -34,4 +37,12 @@ module.exports = {
     }
   },
 
+  devServer: {
+    historyApiFallback: {
+      rewrites: [
+        { from: /subsite/, to: '/subSite/index.html' },
+        { from: /^\/[\s\S]*/, to: '/mainSite/index.html' }
+      ]
+    }
+  }
 }
