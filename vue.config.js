@@ -19,6 +19,7 @@ module.exports = {
    // 多页面入口配置
   pages,
   
+  // 静态资源目录配置，不配置默认 js、css等资源目录会直接在根目录
   assetsDir: 'static',
 
   // cdn域名配置

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.fbace06a78ce9bc2e48657d4acab5e44.js"
+  "/precache-manifest.69e2b5db71dbebe03398c7961a2988eb.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "express-vue-amp-template"});
