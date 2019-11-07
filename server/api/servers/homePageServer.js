@@ -25,7 +25,7 @@ exports.getTikTokHotTagData = (callback) => {
         renderData.apiJonsContent = JSON.stringify(content)
         callback(renderData)
       } else {
-        serverApi.patpatApi.get('/ai_market/ai_douyin/get_hot_search_label/v1', { params: {} }).then(res => {
+        serverApi.tikTokApi.get('/ai_market/ai_douyin/get_hot_search_label/v1', { params: {} }).then(res => {
           if (res.status === 200) {
             content.apiData.tikTokHotTag = res.data
             redisCahce.addRedisCahceData(constants.redisKeyTikTokHotTagData, res.data, constants.redisExpireSevenDays)

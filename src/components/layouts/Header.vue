@@ -23,8 +23,9 @@ export default {
   position: fixed;
   width: 100%;
   height: 60px;
-  background-color: #ffffff;
+  background-color: #0398e1;
   box-shadow: 0 0 5px #b9b9b9;
+  z-index: 100;
   h1 {
     text-align: center;
     padding: 20px;

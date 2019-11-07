@@ -35,6 +35,7 @@
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "mobile-detect": "^1.4.3",
+    "spinkit": "^2.0.1",
     "vue-template-compiler": "^2.6.10"
   }
 }

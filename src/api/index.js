@@ -8,9 +8,9 @@ let tikTokApi = axios.create(patpatApiConfig)
 let trackApi = axios.create(trackApiConfig)
 
 tikTokApi.interceptors.request.use(
+  // debugger
   config => {
-    config.headers['customers-ip'] = global.customersIp
-    config.headers['Authorization'] = process.env.AUTHORIZATION
+    config.headers['Authorization'] = process.env.VUE_APP_AUTHORIZATION
     // console.log('return api config', config)
     return config
   },
@@ -21,3 +21,4 @@ tikTokApi.interceptors.request.use(
 module.exports.tikTokApi = tikTokApi
 
 module.exports.trackApi = trackApi
+
