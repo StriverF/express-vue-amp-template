@@ -1,6 +1,6 @@
 <template>
   <div class="xx-layout">
-    <Header v-if="isShowHeader"></Header>
+    <Header v-if="isShowHeader" :title="nav.title" :leftText="nav.leftText" :rightText="nav.rightText"></Header>
     <main class="main-container">
       <slot>
       </slot>
@@ -13,8 +13,25 @@
 import Header from './Header'
 import Footer from './Footer'
 export default {
+  props: {
+    nav: {
+      type: Object,
+      default: () => {
+        return {
+          title: '导航栏标题',
+          leftText: '左按钮',
+          rightText: '右按钮'
+        }
+      }
+    },
+    foter: Object,
+  },
+  data() {
+    return {
+      
+    }
+  },
   components: { Header, Footer },
-
   computed: {
     isShowHeader () {
       return true
@@ -22,8 +39,7 @@ export default {
     isShowFooter () {
       return true
     }
-  },
-  
+  }
 }
 </script>
 

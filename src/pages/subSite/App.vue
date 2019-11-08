@@ -1,29 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/home">Sub Site Home</router-link> |
-      <router-link to="/about">Sub Site  About</router-link>
-    </div>
-    <router-view/>
+   <Layout :nav='nav'>
+       <router-view/>
+    </Layout>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+import Layout from '../../components/layouts/Layout'
+export default {
+  data() {
+    return {
+      nav: {
+        title: '子站点',
+        leftText: '主站点',
+        rightText: 'AMP页面',
+      }
     }
-  }
+  },
+  components: {Layout}
 }
+</script>
+<style lang="less">
+@import '../../styles/custom.less';
 </style>

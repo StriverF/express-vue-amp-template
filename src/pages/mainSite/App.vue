@@ -1,11 +1,6 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/> -->
-    <Layout>
+    <Layout :nav='nav'>
        <router-view/>
     </Layout>
   </div>
@@ -14,6 +9,15 @@
 <script>
 import Layout from '../../components/layouts/Layout'
 export default {
+  data() {
+    return {
+      nav: {
+        title: '抖音排行榜',
+        leftText: '子站点',
+        rightText: 'AMP页面'
+      }
+    }
+  },
   components: {Layout}
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    子站点首页
+  <div class="subsite-home">
+    子站点首页<br>
     <a href="/">返回主站点首页</a>
   </div>
 </template>
@@ -15,5 +15,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+.subsite-home {
+  text-align: center;
+  padding: 200px 0;
+}
 </style>
