@@ -14,11 +14,12 @@ export default {
     tikTokHotTagData: {
       type: Array,
       default: () => []
-    }
+    },
+    defaultTagActive: Number
   },
   data() {
     return {
-      tagActive: 0,
+      tagActive: this.defaultTagActive || 0,
     }
   },
   methods: {

@@ -3,6 +3,8 @@ const apiController = require('../controllers/apiController')
 
 var router = express.Router()
 
-router.get('/product/', apiController.product)
+router.get('/tikTok/HotTag', apiController.tikTokHotTag)
+
+router.get('/tikTok/HotTag/Content', apiController.tikTokHotTagContent)
 
 module.exports = router

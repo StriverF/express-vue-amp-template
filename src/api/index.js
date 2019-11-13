@@ -1,10 +1,10 @@
 const axios = require('axios')
-const patpatApiConfig = require('./configs/patpatApi')
+const tikTokApiConfig = require('./configs/tikTokApi')
 const trackApiConfig = require('./configs/trackApi')
 /**
  * 可配置多个API请求类对象
  */
-let tikTokApi = axios.create(patpatApiConfig)
+let tikTokApi = axios.create(tikTokApiConfig)
 let trackApi = axios.create(trackApiConfig)
 
 tikTokApi.interceptors.request.use(

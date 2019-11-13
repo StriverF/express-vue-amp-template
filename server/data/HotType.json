@@ -1,50 +1,72 @@
 [
   {
-    "DOUYIN_TOPIC_1ST": "热搜",
-    "DOUYIN_TOPIC_2ND": "热搜榜"
+    "tikTokTopicSt": "热搜",
+    "tikTokTopicNd": [
+      "热搜榜",
+      "视频榜",
+      "正能量",
+      "明星榜",
+      "音乐榜"
+    ]
   },
   {
-    "DOUYIN_TOPIC_1ST": "热搜",
-    "DOUYIN_TOPIC_2ND": "视频榜"
+    "tikTokTopicSt": "品牌榜",
+    "tikTokTopicNd": [
+      "汽车",
+      "手机",
+      "美妆",
+      "奢侈品",
+      "食品饮料",
+      "家用电器",
+      "服装鞋帽"
+    ]
   },
   {
-    "DOUYIN_TOPIC_1ST": "热搜",
-    "DOUYIN_TOPIC_2ND": "正能量"
+    "tikTokTopicSt": "娱乐",
+    "tikTokTopicNd": [
+      "汽车",
+      "手机",
+      "美妆",
+      "奢侈品",
+      "食品饮料",
+      "家用电器",
+      "服装鞋帽"
+    ]
   },
   {
-    "DOUYIN_TOPIC_1ST": "热搜",
-    "DOUYIN_TOPIC_2ND": "明星榜"
+    "tikTokTopicSt": "科技",
+    "tikTokTopicNd": [
+      "汽车",
+      "手机",
+      "美妆",
+      "奢侈品",
+      "食品饮料",
+      "家用电器",
+      "服装鞋帽"
+    ]
   },
   {
-    "DOUYIN_TOPIC_1ST": "热搜",
-    "DOUYIN_TOPIC_2ND": "音乐榜"
+    "tikTokTopicSt": "公益",
+    "tikTokTopicNd": [
+      "汽车",
+      "手机",
+      "美妆",
+      "奢侈品",
+      "食品饮料",
+      "家用电器",
+      "服装鞋帽"
+    ]
   },
   {
-    "DOUYIN_TOPIC_1ST": "品牌榜",
-    "DOUYIN_TOPIC_2ND": "汽车"
-  },
-  {
-    "DOUYIN_TOPIC_1ST": "品牌榜",
-    "DOUYIN_TOPIC_2ND": "手机"
-  },
-  {
-    "DOUYIN_TOPIC_1ST": "品牌榜",
-    "DOUYIN_TOPIC_2ND": "美妆"
-  },
-  {
-    "DOUYIN_TOPIC_1ST": "品牌榜",
-    "DOUYIN_TOPIC_2ND": "奢侈品"
-  },
-  {
-    "DOUYIN_TOPIC_1ST": "品牌榜",
-    "DOUYIN_TOPIC_2ND": "食品饮料"
-  },
-  {
-    "DOUYIN_TOPIC_1ST": "品牌榜",
-    "DOUYIN_TOPIC_2ND": "家用电器"
-  },
-  {
-    "DOUYIN_TOPIC_1ST": "品牌榜",
-    "DOUYIN_TOPIC_2ND": "服装鞋帽"
+    "tikTokTopicSt": "学习",
+    "tikTokTopicNd": [
+      "汽车",
+      "手机",
+      "美妆",
+      "奢侈品",
+      "食品饮料",
+      "家用电器",
+      "服装鞋帽"
+    ]
   }
 ]

@@ -20,6 +20,14 @@ if (process.env.DEBUG !== 'true') {
   app.use(timeout('60s'))
 }
 
+app.all('*',function(req,res,next){
+  res.header("Access-Control-Allow-Origin","*");
+  res.header("Access-Control-Allow-Headers","Content-Type,Content-Length,Authorization,Accept,X-Requested-With");
+  res.header("Access-Control-Allow-Methods","*");
+  res.header("X-Powered-By","3.2.1");
+  res.header('Content-Text',"application/json;charset=utf-8");
+  next();
+}) 
 // 映射静态资源目录
 app.use('/', express.static('public/'))
 
