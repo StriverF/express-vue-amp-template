@@ -43,7 +43,10 @@ export default {
     ) {
       let  apiTikTokHotTagData = window.apiJonsContent.apiData.tikTokHotTag;
       this.tikTokHotTagData = apiTikTokHotTagData
-      console.log("获取服务端数据", this.tikTokHotTagData);
+      let topicST = this.tikTokHotTagData[this.tagActive].tikTokTopicSt
+      let topicND = this.selectTagList[this.tag2ndActive]
+      this.getTikTokHotTagContentData(topicST, topicND)
+      console.log("获取服务端注入的数据", this.tikTokHotTagData);
     } else {
       this.getTikTokHotTagListData()
     }

@@ -7,7 +7,7 @@ exports.getTikTokHotTagData = (callback) => {
     try {
       
       let renderData = {
-        meta: '<meta name="keywords" content="moms, shopping"/>',
+        meta: '<meta name="keywords" content="express + vue + amp "/>',
         apiJonsContent: ''
       }
 
@@ -25,19 +25,21 @@ exports.getTikTokHotTagData = (callback) => {
         renderData.apiJonsContent = JSON.stringify(content)
         callback(renderData)
       } else {
-        serverApi.tikTokApi.get('/ai_market/ai_douyin/get_hot_search_label/v1', { params: {} }).then(res => {
-          if (res.status === 200) {
-            content.apiData.tikTokHotTag = res.data
-            redisCahce.addRedisCahceData(constants.redisKeyTikTokHotTagData, res.data, constants.redisExpireSevenDays)
-            
-            renderData.apiJonsContent = JSON.stringify(content)
-            callback(renderData)
-          } else {
-            throw new Error('请求/ai_market/ai_douyin/get_hot_search_label/v1 API失败')
-          }
-        }).catch(error => {
-          throw error
-        })
+        let tikTokHotTagData = require(`../../data/HotType.json`)
+        redisCahce.addRedisCahceData(constants.redisKeyTikTokHotTagData, tikTokHotTagData, constants.redisExpireSevenDays)
+        // 正常可以在node服务端请求业务api，这里模板只直接读取json数据。
+        // serverApi.tikTokApi.get('/tikTok/HotTag', { params: {} }).then(res => {
+        //   if (res.status === 200) {
+        //     content.apiData.tikTokHotTag = res.data
+        //     redisCahce.addRedisCahceData(constants.redisKeyTikTokHotTagData, res.data, constants.redisExpireSevenDays)
+        //     renderData.apiJonsContent = JSON.stringify(content)
+        //     callback(renderData)
+        //   } else {
+        //     throw new Error('请求/tikTok/HotTag API失败')
+        //   }
+        // }).catch(error => {
+        //   throw error
+        // })
       }
     } catch (error) {
       callback(null, error)

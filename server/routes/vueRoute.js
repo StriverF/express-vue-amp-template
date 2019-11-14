@@ -9,6 +9,9 @@ router.use(vueMiddleware)
 
 router.get('/:lang([a-z]{2,2})?/', vueController.homePage)
 
+router.get('/:lang([a-z]{2,2})?/subsite/home', vueController.subsiteHomePage)
+
+
 // router.get('/:lang([a-z]{2,2})?/*', vueController.commonPage)
 
 module.exports = router

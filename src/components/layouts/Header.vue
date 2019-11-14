@@ -25,7 +25,12 @@ export default {
     },
     clickLeftBox () {
       // this.$router.push({ path: '/subsite/home' } )
-      window.location = '/subsite/home'
+      if (this.leftText === "子站点") {
+        window.location = '/subsite/home'
+      } else if (this.leftText === "主站点") {
+        window.location = '/'
+      }
+      
     },
     clickRightBox () {
       console.log("打开AMP页面")
@@ -52,7 +57,7 @@ export default {
     text-align: center;
     line-height: @nav-height;
     span {
-      color: #f1435a;
+      color: #fff;
     }
   }
   .right-box {
@@ -62,7 +67,7 @@ export default {
     text-align: center;
     line-height: @nav-height;
     span {
-      color: #f1435a;
+      color: #fff;
     }
   }
   .title-box {

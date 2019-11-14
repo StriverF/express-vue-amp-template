@@ -58,4 +58,8 @@ export default {
     }
   }
 }
+// 隐藏横向滚动条
+.hot-tag-list-1ts::-webkit-scrollbar {
+    display: none;
+}
 </style>
