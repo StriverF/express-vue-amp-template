@@ -1,5 +1,4 @@
 .idea
 .env
 # /cert
-/node_modules
-.vscode
+/public
