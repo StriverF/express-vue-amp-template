@@ -161,7 +161,8 @@
     <!-- <a href="https://github.com/muhammederdem/credit-card-form" target="_blank" class="github-btn">
       See on GitHub
     </a> -->
-    <a class="back-main-site" href="/">返回主站点首页</a>
+    <div class="back-main-site"><a href="/">返回主站点首页</a></div>
+    
   </div>
 </template>
 

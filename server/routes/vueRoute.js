@@ -12,6 +12,6 @@ router.get('/:lang([a-z]{2,2})?/', vueController.homePage)
 router.get('/:lang([a-z]{2,2})?/subsite/home', vueController.subsiteHomePage)
 
 
-// router.get('/:lang([a-z]{2,2})?/*', vueController.commonPage)
+router.get('/:lang([a-z]{2,2})?/*', vueController.subsiteHomePage)
 
 module.exports = router
