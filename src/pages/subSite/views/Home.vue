@@ -832,6 +832,12 @@ export default {
   pointer-events: none;
 }
 
+.card-item__cvvBand {
+  color: #1c1d27;
+  span {
+    color: #1c1d27;
+  }
+}
 
 
 .github-btn {
