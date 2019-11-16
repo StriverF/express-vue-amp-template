@@ -28,4 +28,3 @@ module.exports.subsiteHomePage = function (req, res) {
   }
   res.render('subSite/index', renderData)
 }
-

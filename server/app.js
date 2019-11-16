@@ -30,6 +30,7 @@ app.all('*',function(req,res,next){
 }) 
 // 映射静态资源目录
 app.use('/', express.static('public/'))
+app.use('/amp', express.static('amp'))
 
 // 按照顺序使用路由
 app.use(apiRouter)

@@ -30,13 +30,11 @@ export default {
       } else if (this.leftText === "主站点") {
         window.location = '/'
       }
-      
     },
     clickRightBox () {
       console.log("打开AMP页面")
     }
-  },
-  
+  }
 }
 </script>
 
@@ -79,7 +77,7 @@ export default {
       padding: 18px;
       font-size: 18px;
       color: #fff
-  }
+    }
   }
 }
 </style>
