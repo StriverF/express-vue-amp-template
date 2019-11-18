@@ -1,4 +1,4 @@
-const serverApi = require('../index')
+// const serverApi = require('../index')
 const redisCahce = require('../../tools/redisCache')
 const constants = require('../../tools/constants')
 
@@ -15,9 +15,6 @@ exports.getTikTokHotTagData = (callback) => {
         pageType: 'home',
         apiData: {}
       }
-
-      // 获取首页版位数据
-      console.time()
       // 从Redis缓存获取抖音热门标签
       let tikTokHotTagCacheData = await redisCahce.getRedisCahceData(constants.redisKeyTikTokHotTagData)
       if (tikTokHotTagCacheData) {

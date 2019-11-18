@@ -2,7 +2,7 @@
   <div class="list-content">
       <ul v-if="tikTokListContent.length > 0" class="hot-tag-list-content">
         <li v-for="(contentItem, index) in tikTokListContent" :key="index" >
-          <img :src="contentItem.DOUYIN_OWNER_IMAGE_SRC || contentItem.DOUYIN_BRAND_IMAGE_SRC" :alt="contentItem.DOUYIN_OWNER_TITLE" class="list-content-image">
+          <img :src="contentItem.DOUYIN_OWNER_IMAGE_SRC || contentItem.DOUYIN_BRAND_IMAGE_SRC | httpOrHttpsToAuto" :alt="contentItem.DOUYIN_OWNER_TITLE" class="list-content-image">
           <span v-text="contentItem.DOUYIN_OWNER_TITLE || contentItem.DOUYIN_BRAND_TITLE"></span>
           <p v-text="contentItem.DOUYIN_TOPIC_SUB_TITLE"></p>
         </li>
@@ -22,8 +22,14 @@ export default {
       type: Array,
       default: () => []
     }
+  },
+  filters: {
+    httpOrHttpsToAuto (imageUrl) {
+      if (!imageUrl) return imageUrl
+      let splitArr = imageUrl.split(':')
+      return splitArr[1] ? splitArr[1] : imageUrl
+    }
   }
-  
 }
 </script>
 
@@ -44,6 +50,9 @@ export default {
       .list-content-image {
         width: 60px;
         height: 60px;
+      }
+      span, p {
+        color: dimgray
       }
     }
   }
