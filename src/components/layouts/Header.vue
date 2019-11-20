@@ -32,7 +32,7 @@ export default {
       }
     },
     clickRightBox () {
-      console.log("打开AMP页面")
+      window.location = '/amp/pets'
     }
   }
 }

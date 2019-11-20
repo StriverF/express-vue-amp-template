@@ -37,7 +37,26 @@ module.exports = {
       )
     }
   },
-
+  // PWA 插件相关配置
+  // see https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
+  pwa: {
+    name: 'EVAP',
+    workboxOptions: {
+      swDest: 'evap-sw.js',
+      skipWaiting: true, // 跳过老缓存资源的生命周期使其更新新的资源
+      clientsClaim: true,
+      // importWorkboxFrom: 'local',
+      // include: [
+      //   /mainSite\/index.html$/,
+      //   /static\/js\/mainSite.[\s\S]*\.js$/,
+      //   /static\/css\/mainSite.[\s\S]*\.css$/,
+      //   /static\/js\/chunk-vendors.[\s\S]*\.js$/,
+      //   /static\/css\/chunk-vendors.[\s\S]*\.css$/
+      // ],
+      directoryIndex: 'mainSite/index.html',
+      cacheId: 'pps-cache'
+    }
+  },
   devServer: {
     historyApiFallback: {
       rewrites: [

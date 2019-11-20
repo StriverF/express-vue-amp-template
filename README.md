@@ -1,4 +1,4 @@
-# express-vue-amp-template
+# Express+Vue+AMP+PWA项目模板使用说明
 
 ## Project setup
 ```
