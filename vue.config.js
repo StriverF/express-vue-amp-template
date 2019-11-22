@@ -42,18 +42,18 @@ module.exports = {
   pwa: {
     name: 'EVAP',
     workboxOptions: {
-      swDest: 'evap-sw.js',
+      swDest: process.env.VUE_APP_PWA_SW_DEST,
       skipWaiting: true, // 跳过老缓存资源的生命周期使其更新新的资源
       clientsClaim: true,
       // importWorkboxFrom: 'local',
-      // include: [
+      // include: [  //筛选需要缓存的静态资源，不配置默认缓存全部静态资源
       //   /mainSite\/index.html$/,
       //   /static\/js\/mainSite.[\s\S]*\.js$/,
       //   /static\/css\/mainSite.[\s\S]*\.css$/,
       //   /static\/js\/chunk-vendors.[\s\S]*\.js$/,
       //   /static\/css\/chunk-vendors.[\s\S]*\.css$/
       // ],
-      directoryIndex: 'mainSite/index.html',
+      // directoryIndex: 'mainSite/index.html', //把html文档也进行缓存，可以实现无网络正常流量页面，但是如果htm文档需要动态注入数据的话，不建议启用。
       cacheId: 'pps-cache'
     }
   },
