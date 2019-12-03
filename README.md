@@ -18,7 +18,7 @@
 [StriverF/express-vue-amp-template](https://github.com/StriverF/express-vue-amp-template)
 
 项目运行效果
-<img src="https://cdn.patpat.site/mweb/gifhome_1920x1773_40s.gif" class="img-topic" />
+<img src="/StriverF/express-vue-amp-template/raw/master/demo.gif" />
 
 ## 模板项目使用介绍
 ### 项目环境配置
